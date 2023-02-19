@@ -23,7 +23,7 @@ pub struct Config {
 }
 
 impl Config {
-    pub(crate) fn set_layout_file_path(&mut self, layout: &str) {
+    pub fn set_layout_file_path(&mut self, layout: &str) {
         self.layout = layout.to_string();
     }
 
@@ -31,7 +31,7 @@ impl Config {
         &self.layout
     }
 
-    pub(crate) fn set_database_dir(&mut self, path: &str) {
+    pub fn set_database_dir(&mut self, path: &str) {
         self.database_dir = path.into();
     }
 
@@ -62,7 +62,7 @@ impl Config {
         self.include_english && !self.ansi
     }
 
-    pub(crate) fn set_suggestion_include_english(&mut self, include: bool) {
+    pub fn set_suggestion_include_english(&mut self, include: bool) {
         self.include_english = include;
     }
 
@@ -71,7 +71,7 @@ impl Config {
     }
 
     /// Set the config's phonetic database.
-    pub(crate) fn set_phonetic_suggestion(&mut self, phonetic_suggestion: bool) {
+    pub fn set_phonetic_suggestion(&mut self, phonetic_suggestion: bool) {
         self.phonetic_suggestion = phonetic_suggestion;
     }
 
